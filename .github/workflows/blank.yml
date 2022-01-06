@@ -15,27 +15,23 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  copy:
+    name: Copy my folder
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:         
-      - name: Copy my folder
+    steps:
       - uses: actions/checkout@v2
       - name: copy
         env:
-          SRC_FOLDER_PATH: 'car.html'
+          SRC_FOLDER_PATH: '.'
           TARGET_BRANCH: 'gh-pages'
         run: |
           files=$(find $SRC_FOLDER_PATH -type f) # get the file list
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
           git fetch                         # fetch branches
-          git checkout $main       # checkout to your branch
+          git checkout $TARGET_BRANCH       # checkout to your branch
           git checkout ${car.html} -- $files # copy files from the source branch
           git add -A
           git diff-index --quiet HEAD ||  git commit -am "deploy files"  # commit to the repository (ignore if no modification)
           git push origin $TARGET_BRANCH # push to remote branch
-
+          
