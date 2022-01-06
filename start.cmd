@@ -1,1 +1,1 @@
-start jupyter notebook ./car.ipynb
+start jupyter notebook ./notebook/car.ipynb
