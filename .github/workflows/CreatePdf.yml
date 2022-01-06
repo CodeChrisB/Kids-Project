@@ -1,27 +1,37 @@
-# .github/workflows/convert-to-pdf.yml
+name: deploy-book
 
-name: Docs to PDF
-# This workflow is triggered on pushes to the repository.
+# Only run this when the master branch changes
 on:
   push:
     branches:
-      - main
-     # Paths can be used to only trigger actions when you have edited certain files, such as a file within the /docs directory
-    paths:
-      - 'notebook/**.ipynb'
-      - 'savedImages/**'
+    - main
+
+
+# This job installs dependencies, builds the book, and pushes it to `gh-pages`
 jobs:
-  converttopdf:
-    name: Build PDF
+  deploy-book:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: baileyjm02/markdown-to-pdf@v1
-        with:
-          input_dir: notebook
-          output_dir: pdfs
-          build_html: false
-      - uses: actions/upload-artifact@v1
-        with:
-          name: notebook
-          path: pdfs
+    - uses: actions/checkout@v2
+
+    # Install dependencies
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    # Build the book
+    - name: Build the book
+      run: |
+        jupyter-book build .
+
+    # Push the book's HTML to github-pages
+    - name: GitHub Pages action
+      uses: peaceiris/actions-gh-pages@v3.6.1
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_build/html
