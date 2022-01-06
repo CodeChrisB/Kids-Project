@@ -1,2 +1,3 @@
-jupyter nbconvert --execute --to html car.ipynb
-mv "car.html" "docs/index.html"
+# Build the notebook
+jupyter nbconvert --execute --to html "car.ipynb"
+mv "car.html" "index.html" 
