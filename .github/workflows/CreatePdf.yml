@@ -16,16 +16,9 @@ jobs:
         GITHUB: ${{ toJson(github) }}
       with:
         notebook: "car.ipynb"
-        params: "PATHTOPARAMS.json"
+        params: "{}"
         isReport: False
         poll: True
-    - uses: yaananth/run-notebook@v1
-      env:
-        RUNNER: ${{ toJson(runner) }}
-        SECRETS: ${{ toJson(secrets) }}
-        GITHUB: ${{ toJson(github) }}
-      with:
-        notebook: "car.ipynb"
     - uses: actions/upload-artifact@master
       if: always()
       with:
