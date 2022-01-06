@@ -22,11 +22,11 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install jupyter-book cookiecutter pytest black
+        pip install jupyter-notebook cookiecutter pytest black
     # Build the book
     - name: Build the book
       run: |
-        jupyter-book build .
+        jupyter-notebook build .
 
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
