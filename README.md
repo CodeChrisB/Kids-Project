@@ -17,7 +17,7 @@
 * pandas 
 * matplotlib.pyplot
 * seaborn 
-* from IPython (Image, display, HTML)
+* IPython
 * time
 * math
 * numpy
