@@ -7,7 +7,7 @@
 <br>
 
 ### Mit diesen Daten wird:
-* eine Daten-Explaration und eine Daten-Manipulation durchgeführt.
+* eine Daten-Exploration und eine Daten-Manipulation durchgeführt.
 * eine Datenvisualisierung
 * ein Training eines Modells zur Klassifizierung bzw. Regression eines Targets
 * ein Modell evaluiert.
