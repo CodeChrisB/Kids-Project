@@ -2,7 +2,7 @@
 ## Von Christopher Buchberger, Emil Kraft und Sebastian Egger:
 <br>
 
-### Dieses Kids Projekt beinhaltet Daten über die Batterie und Heizdaten eines Autos von 
+### Dieses Kids Projekt beinhaltet Daten zahlreiche Daten über ein Auto während verschiedenen Fahrten.
 - [Kaggle (Link zur Datenquelle)](https://www.kaggle.com/atechnohazard/battery-and-heating-data-in-real-driving-cycles?select=TripA01.csv,)
 <br>
 
