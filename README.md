@@ -23,4 +23,12 @@
 * numpy
 * ipywidgets 
 
-### Die Visualisierung liegt im Ordner .ipynb_checkpoints
+### Um dieses Projekt zu starten muss Jupyter Notebook installiert sein
+
+
+### Bilder zum Projekt
+
+![Image](https://raw.githubusercontent.com/CodeChrisB/Kids-Project/main/savedImages/MassPlot.png)
+![Image](https://raw.githubusercontent.com/CodeChrisB/Kids-Project/main/savedImages/coolantSolution.png)
+![Image](https://raw.githubusercontent.com/CodeChrisB/Kids-Project/main/savedImages/TimeBatteryHeatPlot.png)
+![Image](https://raw.githubusercontent.com/CodeChrisB/Kids-Project/main/savedImages/proof1.png)
