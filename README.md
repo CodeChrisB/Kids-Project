@@ -23,7 +23,10 @@
 * numpy
 * ipywidgets 
 
-### Um dieses Projekt zu starten muss Jupyter Notebook installiert sein
+### Html Generieren
+Im Projekt befindet sich eine "build.cmd"
+Diese cmd builded ein File Namens "index.html"
+![image](https://user-images.githubusercontent.com/55576076/151455837-f7e2dcef-8202-4578-b0d8-6b60cd67fc86.png)
 
 
 ### Bilder zum Projekt
